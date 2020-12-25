@@ -67,7 +67,7 @@ int main(int argc, char* argv[]){
             }
         }
         //str_len = read(sock, message, BUF_SIZE-1);
-        message[str_len] = 0;
+        message[str_len+1] = 0;
         printf("Message from serv: %s", message);
     }
 
