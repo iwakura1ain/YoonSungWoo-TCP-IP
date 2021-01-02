@@ -28,7 +28,6 @@ void Help(int argc, int count, char *message){
     }
 }
 
-
 void killZombie(int sig){
     int status;
     pid_t pid = waitpid(-1, &status, WNOHANG);
@@ -97,11 +96,8 @@ int main(int argc, char *argv[]){
     }
     close(serv_sock);
     return 0;
-
-
-
-
 }
+
 
 
 

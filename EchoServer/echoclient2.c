@@ -33,7 +33,8 @@ int main(int argc, char* argv[]){
 
     sock = socket(PF_INET, SOCK_STREAM, 0);
     Error("socket() error", sock);
-    
+
+        
     memset(&serv_addr, 0, sizeof(serv_addr));
     serv_addr.sin_addr.s_addr = inet_addr(argv[1]);
     serv_addr.sin_port = htons(atoi(argv[2]));
@@ -54,7 +55,7 @@ int main(int argc, char* argv[]){
         }
 
         str_len = write(sock, message, strlen(message));
-
+       
         recv_len = 0;
         while(recv_len < str_len){
             temp_recv = read(sock, message, BUF_SIZE);
